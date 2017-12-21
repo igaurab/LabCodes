@@ -1,0 +1,14 @@
+Lab 3
+Questions
+1. Write a function that passes two temperatures by reference and sets the larger of the two numbers to 100 by using return by reference.
+2. Write a program that converts inches to feet and feet to inches using function overloading. Use function with no argument, one argument and two arguments. Decide yourself the types of arguments. Use pass by reference in any one of the function above.
+3. Assume that employee will have to pay 10 percent income tax to the government. Ask user to enter the employee salary. Use inline function to display the net payment to the employee by the company.
+4. Write a program to display n characters by using default arguments for all parameters. Assume that the function takes two arguments (one character to be printed and other number of characters to be printed). Solve the same problem by using function overloading.
+
+
+Lab 4
+Questions:
+1. Write a program that will represent angular measurement in degree with OOP approach and the program should have conversion functions to convert to radian measurement.
+2. Write a simple program that convert the temperature in degree Centigrade to degree Fahrenheit and vice versa using the basic concept of class and object. Make separate class for Centigrade and Fahrenheit which will have the private member to hold the value and add conversion function in each class from centigrade or Fahrenheit. 
+3. Write a meaningful program to illustrate the use of static data member and static function members.
+4. Write a program for array manipulation such as adding items, removing items, getting items, assigning items to specific location etc. Make a class with required members and use dynamic allocation of array.
