@@ -1,5 +1,28 @@
+Lab 1 - Review in C programming
+Questions:
+1. Write a program in C to add two numbers and display the result using a function.
+2. Write a program in C to check whether a given number is a prime of not.
+3. Write a program in C to store details of 10 students and then display them.
+
+Lab 2
+Questions:
+1. Write a temperature conversion program from Celsius to Fahrenheit and vice-versa depending on the choice made by the user. (Hint: switch)
+2. WAP to find the smallest and largest number from array using DMA with new and delete operator. 
+3. WAP to print the following content as shown in below. (Use Appropriate manipulator)
+S.N	Roll Number		Name		Age
+1	101			Ram 		25
+2	102			Sita		23
+3	103			Rajesh		26
+4         104			Gita		24
+
+4. WAP to illustrate symbolic constant with appropriate comments on your results by using.
+i. Qualifier constant (const)
+ii. enumerated data type (enum)
+iii. #define preprocessor
+
+
 Lab 3
-Questions
+Questions:
 1. Write a function that passes two temperatures by reference and sets the larger of the two numbers to 100 by using return by reference.
 2. Write a program that converts inches to feet and feet to inches using function overloading. Use function with no argument, one argument and two arguments. Decide yourself the types of arguments. Use pass by reference in any one of the function above.
 3. Assume that employee will have to pay 10 percent income tax to the government. Ask user to enter the employee salary. Use inline function to display the net payment to the employee by the company.
@@ -12,3 +35,41 @@ Questions:
 2. Write a simple program that convert the temperature in degree Centigrade to degree Fahrenheit and vice versa using the basic concept of class and object. Make separate class for Centigrade and Fahrenheit which will have the private member to hold the value and add conversion function in each class from centigrade or Fahrenheit. 
 3. Write a meaningful program to illustrate the use of static data member and static function members.
 4. Write a program for array manipulation such as adding items, removing items, getting items, assigning items to specific location etc. Make a class with required members and use dynamic allocation of array.
+Lab 5
+Questions:
+
+1. Write a program that display the total time in 24-hour clock format having fixed time 12:34:56 and 10:35:14. One constructor should initialize member data hour, minute and second to 0 and another should initialize it to fixed values. Other two member functions should add two objects of type time passed as arguments and display the result 
+2. Assume that one constructor initialize member data say no_pax, tra_rate and provides 10% discount if number of no_pax exceeds 10. And display the total charge. Use two objects and show bit-by-bit copy of one object to another (copy constructor).
+3. Write a program that first object contains "Engineers are" and second contains " Creatures of logic". Member function engineer should concatenate two strings by passing two objects as arguments. And display the contained of third object that contains the concatenated string  "Engineers are creatures of logic". Use constructor to initialize the member data. And make your own function for concatenation of two strings.
+4. Write a program to make a specific function of a class as a friend of other class to add elements from the two classes. Both of these classes should have two integer members. Make others global functions to subtract and multiply objects of class one and class two.
+
+
+Lab 6
+Questions:
+
+1. Write a program to overload unary increment (pre/post) operators using friend function.
+2. Define a class String. Use overloaded = =, >=, <= to compare the two strings.
+3. Define two classes Polar and Rectangle to represent points in the polar and rectangular system.
+   Use conversion routines to convert from one class type to another by using casting operator and constructor.
+4. WAP to overload the relational operators to compare the length (in meter and centimeter) of two objects.
+
+Try at home:
+1. Create a class named City that will have two member variables cityName (character array]) and distFromKtm (float). Add member functions to set and retrieve the cityName and distFromKtm separately. Add operator overloading to find the distance between the cities (just find the difference of distFromKtm) and sum of distance of those cities from Kathmandu. In the main function, initialize three City objects. Set the first and second city to be Pokhara and Dhangadi. Display the sum of DistFromKtm of Pokhara and Dhangadi and distance between Pokhara and Dhangadi.
+2. Develop a program using a class with 3X3 matrix as a data member. Overload the * operator so as to multiply two matrices.
+3. WAP to add two matrices by overloading  the + operator.
+4. WAP having a class to represent money. The class should have two integer members to represent rupees and paisa. Overload + and – operators for adding and subtracting the objects. Then, oberload >, <, == and != operators for comparing the objects. 
+5. Write a program to define a class Distance with necessary data members and functions. Then overload the relational operators to compare the two objects of class Distance.
+6. WAP to overload relational operators ( ==, != , >, <, >=, <= ) to compare complex numbers.
+7. WAP that will convert object from a class Rectangle to object of a class Polar using casting operator.
+
+
+
+Lab 7
+Questions:
+
+1. Write a program to create a class shape with functions to find area of the shapes and display the name of the shape and other essential component of the class. Create derived classes circle, rectangle and trapezoid each having overridden functions area and display. Write a suitable program to illustrate, virtual functions, pure virtual functions and abstract class. 
+2. Write a program having student as an abstract class and create derived class such as Engineering, Science and Medical. Create their objects process them and access them using array of base class pointers.
+3. 
+4. WAP to show the invocation order of the constructor in the following inheritance.
+a. Multilevel inheritance
+b. Hybrid inheritance
