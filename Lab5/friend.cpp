@@ -1,52 +1,85 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Class2{
-    private:
-        int n1,n2;
-    public:
-	Class2(){
-	n1=2;
-	n2 =4;
-	}
-        friend int add(Class2 obj2);
-        friend void multiply(Class1 obj1, Class2 obj2);
-        friend void subtract(Class1 obj1, Class2 obj2);
-};
-
-class Class1{
-
-    private:
-        int n1,n2;
-    public:
-	
-	Class1(){
-	n1=1;
-	n2 =3;
-	}
-        int add(Class2 obj2){
-           return n1+n2+obj2.n1+obj2.n2; 
-        }
+class B;
+class A{
+private:
+    float a,b;
+public:
+    A(){}
+    A(float a, float b);
+    friend A multiply(A temp_a,B temp_b);
+    friend A divide(A temp_a,B temp_b);
+    A add(B b);
+    void display();
     
-        friend void multiply(Class1 obj1, Class2 obj2);
-        friend void subtract(Class1 obj1, Class2 obj2);
+    
 };
+class B{
+private:
+    float a,b;
+public:
+    B(){}
+    B(float a, float b);
 
-void multiply(Class1 obj1, Class2 obj2){
-   cout << obj1.n1*obj1.n2*obj2.n1*obj2.n2;
-}
-
-void subtract(Class1 obj1 , Class2 obj2){
-    cout << obj1.n1-obj2.n2;
-}
+    friend A multiply(A temp_a,B temp_b);
+    friend A divide(A temp_a,B temp_b);
+    friend A A :: add(B temp_b);
+};
 
 int main(){
-    Class1 obj1;
-    Class2 obj22;
-    int sum;
-    sum=obj1.add(obj22);
-    cout << sum << endl;
-    multiply(obj1,obj22);
-    subtract(obj1,obj22);
-return 0;
+    A a(1,2),temp;
+    B b(2,4);
+    
+cout <<"Addition"<<endl;
+    temp=a.add(b);
+    temp.display();
+
+    cout<<"Multiplication"<<endl;
+    temp=multiply(a,b);
+    temp.display();
+
+    cout<<"Division"<<endl;
+    temp=divide(a,b);
+    temp.display();
+
+    return 0;
+}
+
+A multiply(A temp_a,B temp_b){
+    A temp;
+    temp.a = temp_a.a*temp_b.a;
+    temp.b = temp_a.b *temp_b.b;
+
+    return temp;
+}
+A divide(A temp_a,B temp_b){
+    A temp;
+    temp.a = temp_a.a/temp_b.a;
+    temp.b = temp_a.b /temp_b.b;
+
+    return temp;
+}
+
+A A :: add(B temp_b){
+    A sum ;
+    sum.a = a+temp_b.a;
+    sum.b = b+temp_b.b;
+    return sum;
+}
+
+void A::display(){
+    cout<<a<<endl;
+    cout<<b<<endl;
+}
+
+A::A(float a, float b){
+    this->a = a;
+    this->b = b;
+}
+
+
+B::B(float a, float b){
+    this->a = a;
+    this->b = b;
 }
