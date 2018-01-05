@@ -2,7 +2,7 @@
 using namespace std;
 class Distance{
     private:
-        int l; //l-->length
+        int m,c; //m-->meter, c-->centometer
     public:
         void SetLength();
         void display();
@@ -32,27 +32,31 @@ int main(){
     return 0;
 }
 void Distance::SetLength(){
-    cin>>l;
+    cin>>m;
+    cin>>c;
 }
 void Distance::display(){
-    cout<< l <<endl;
+    cout<< m <<"m ";
+    cout<< c <<endl;
 }
 bool Distance::operator==(Distance temp){
-    if (l==temp.l){
-        return true;
+    if (m==temp.m){
+       if(c==temp.c){
+           return true;
+       }
     }
     return false;
 }
 
 bool Distance::operator>(Distance temp){
-    if (l>temp.l){
+    if (m>temp.m){
         return true;
     }
     return false;
 }
 
 bool Distance::operator<(Distance temp){
-    if (l<temp.l){
+    if (m<temp.m){
         return true;
     }
     return false;

@@ -69,8 +69,8 @@ A A :: add(B temp_b){
 }
 
 void A::display(){
-    cout<<a<<endl;
-    cout<<b<<endl;
+    cout<<"a: " <<a<<endl;
+    cout<<"b: " <<b<<endl;
 }
 
 A::A(float a, float b){
